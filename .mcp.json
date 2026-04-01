@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "render": {
+      "type": "http",
+      "url": "https://mcp.render.com/mcp?ownerId=tea-d6r5ogvkijhs73bg7dr0",
+      "headers": {
+        "Authorization": "Bearer ${RENDER_API_KEY}"
+      }
+    }
+  }
+}
