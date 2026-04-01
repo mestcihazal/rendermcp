@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cynicalsally-web
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: SALLY_API_URL
+        value: https://cynicalsally-web.onrender.com
+      - key: SALLY_FLAGSHIP_KEY
+        value: ""
+        sync: false
