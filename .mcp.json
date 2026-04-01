@@ -1,20 +1,10 @@
 {
   "mcpServers": {
     "render": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "RENDER_API_KEY",
-        "-e",
-        "RENDER_WORKSPACE",
-        "ghcr.io/render-oss/render-mcp-server"
-      ],
-      "env": {
-        "RENDER_API_KEY": "${RENDER_API_KEY}",
-        "RENDER_WORKSPACE": "tea-d6r5ogvkijhs73bg7dr0"
+      "type": "http",
+      "url": "https://mcp.render.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${RENDER_API_KEY}"
       }
     }
   }
